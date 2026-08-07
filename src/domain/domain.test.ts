@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { assertTenantBoundary, canManageBusinessUnit, hasPermission, type Principal } from './access.js';
-import { isOverdue, remediationPriority, slaDueDate, type RemediationItem } from './remediation.js';
-import { deliveryConfidence } from './engineering.js';
-import { assessInvoice, type Invoice, type Milestone } from './contracts.js';
-import { buildExecutiveAttentionQueue } from './attention.js';
+import { assertTenantBoundary, canManageBusinessUnit, hasPermission, type Principal } from './access';
+import { isOverdue, remediationPriority, slaDueDate, type RemediationItem } from './remediation';
+import { deliveryConfidence } from './engineering';
+import { assessInvoice, type Invoice, type Milestone } from './contracts';
+import { buildExecutiveAttentionQueue } from './attention';
 
 describe('enterprise access boundaries', () => {
   const officer: Principal = { userId: 'u1', tenantId: 't1', roles: ['business_unit_security_officer'], businessUnitIds: ['bu1'] };
@@ -72,7 +72,11 @@ describe('executive attention queue', () => {
       { id: 'a', tenantId: 't1', category: 'delivery', title: 'Minor sprint slip', severity: 2, confidence: 90, ageHours: 8, evidenceRefs: ['story:1'], recommendedAction: 'Review sprint plan' },
       { id: 'b', tenantId: 't1', category: 'security', title: 'Critical vuln overdue', severity: 5, confidence: 98, ageHours: 72, overdue: true, financialExposureCents: 2_000_000_00, evidenceRefs: ['cve:1'], recommendedAction: 'Escalate remediation' }
     ]);
-    expect(queue[0].id).toBe('b');
-    expect(queue[0].priority).toBeGreaterThan(queue[1].priority);
+    const first = queue.at(0);
+    const second = queue.at(1);
+    expect(first?.id).toBe('b');
+    expect(first).toBeDefined();
+    expect(second).toBeDefined();
+    expect(first!.priority).toBeGreaterThan(second!.priority);
   });
 });
