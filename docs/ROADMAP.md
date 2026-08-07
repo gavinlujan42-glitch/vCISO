@@ -11,26 +11,40 @@
 - [x] Strict TypeScript and automated test baseline
 - [x] CI definition and security architecture documentation
 
-## Release 0.2 — Application Services
-- [ ] PostgreSQL schema and migrations
-- [ ] Tenant-aware repository interfaces
-- [ ] Audit event service
-- [ ] Business Unit Security Officer workflow service
-- [ ] Executive Attention Queue API
-- [ ] Contract assurance API
-- [ ] GitHub ingestion adapter
-- [ ] Replace prototype hard-coded metrics with application-service data
+## Release 0.2 — Application Services + Agent Factory
+- [x] PostgreSQL schema and migrations
+- [x] Tenant-aware repository interfaces
+- [x] Append-only audit-event design
+- [x] Business Unit Security Officer workflow service contracts
+- [x] Executive Attention Queue application service
+- [x] Contract assurance application service
+- [x] Normalized GitHub ingestion adapter contract
+- [x] Accountable AI-agent workforce domain model
+- [x] Agent Registry service
+- [x] Human Approval Inbox service
+- [x] Workforce Mission Control service
+- [x] Agent orchestration state machine and human approval gates
+- [x] Agent Workforce Mission Control visual preview
+- [ ] Production PostgreSQL repository implementations
+- [ ] Versioned API transport layer
+- [ ] Replace prototype hard-coded metrics with live application-service data
 
 ## Release 0.3 — Enterprise Identity and Integrations
 - [ ] OIDC authentication
 - [ ] Entra ID integration
+- [ ] GitHub connector ingestion jobs and webhook/event processing
 - [ ] Jira and Linear adapters
 - [ ] Scanner/SIEM connector interface
 - [ ] CI/CD and deployment adapters
 - [ ] Connector health and ingestion observability
 
-## Release 0.4 — Executive Intelligence
+## Release 0.4 — Mission Control + Executive Intelligence
+- [ ] React application shell
+- [ ] Agent Workforce UI backed by live services
 - [ ] Evidence graph drill-down
+- [ ] Human governance and approval inbox UI
+- [ ] Business-unit security posture drill-down
+- [ ] Developer/vendor evidence drill-down
 - [ ] AI Executive Brief grounded in AEGIS records
 - [ ] Ask AEGIS natural-language analysis
 - [ ] Policy-configurable score thresholds and SLAs
