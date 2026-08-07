@@ -1,23 +1,35 @@
-# DevSure
+# AEGIS / vCISO
 
-**Software Delivery Assurance for Contract & Remote Development**
+**Enterprise Operations, Security, Delivery, and Contract Assurance**
 
-DevSure is a CIO/CEO management-intelligence prototype for understanding whether contracted and distributed software-development teams are delivering measurable value.
+AEGIS is an executive operations platform for CIOs, CISOs, PMOs, contract managers, and technology leaders. It unifies security posture, business-unit accountability, engineering delivery evidence, vendor performance, contract assurance, and executive decision support.
 
-## Prototype goals
+## Product modules
 
-- Executive portfolio health and delivery-confidence reporting
-- Contract / SOW to epic, story, PR, test, deployment, and invoice traceability
-- Remote developer effort evidence without invasive employee surveillance
-- Delivery, quality, rework, blocker, review, and financial-value indicators
-- Contractor and vendor scorecards
-- DORA-style engineering delivery metrics
-- AI management narrative for risks, anomalies, and recommended actions
+- **Executive Command** — enterprise health, attention queue, AI briefing, portfolio and risk
+- **vCIO** — projects, portfolio, architecture, budget, technical debt, operations
+- **vCISO** — business-unit posture, vulnerabilities, remediation, risk, controls, incidents
+- **DevSure** — engineering evidence, delivery confidence, quality, rework, DORA-style metrics
+- **Contract Assurance** — contract/SOW/milestone/invoice traceability and vendor confidence
+- **Evidence Graph** — explainable relationships across people, systems, work, risks, and money
 
-## Core principle
+## Six-state posture model
 
-DevSure evaluates delivery evidence and outcomes, not mouse movement, webcam activity, keystrokes, or hours-online telemetry. No single engineering metric should independently become an employee performance rating.
+- **Blue** — optimized / exceeds policy target
+- **Green** — healthy
+- **Yellow** — watch
+- **Orange** — elevated / management attention
+- **Red** — critical / executive intervention
+- **Violet** — insufficient evidence or governance gap
 
-## Prototype
+## Engineering principles
 
-Open `index.html` for the initial interactive executive dashboard mock-up.
+AEGIS is being built as enterprise software: strict typing, deterministic explainable scoring, multi-tenant boundaries, least privilege, automated tests, reviewable pull requests, auditable decisions, and human authorization for consequential actions.
+
+Developer intelligence is evidence and outcome based. Webcam, keystroke, mouse movement, and passive presence surveillance are intentionally outside product scope.
+
+## Repository status
+
+The root `index.html` remains the interactive executive prototype. Enterprise application services and domain contracts are being developed under `src/` with architecture and security documentation under `docs/`.
+
+See `docs/ROADMAP.md`, `docs/ARCHITECTURE.md`, `docs/DATA_MODEL.md`, and `SECURITY.md`.
